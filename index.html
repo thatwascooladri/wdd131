@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Adrian T. De Leon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Adrian T. De Leon</span></h1>
+        <nav class="navigation">
+            <a href="https://www.linkedin.com/in/adriantdeleon" target="_blank">LinkedIn</a>
+            <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card about-me">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>My name is Adrian from the Philippines, and I'm passionate about web development and teaching. I enjoy learning new technologies and exploring creative ways to solve problems. In my free time, I love to travel and experience new cultures. I'm excited about continuing my journey in dynamic web design!</p>
+                <img src="images/IMG_6448 2.jpg" alt="Adrian's photo">
+            </div>
+            <h3>the Philippines</h3>
+            <div class="about-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg" alt="Philippine flag">
+                <p>The Philippines is an archipelago in Southeast Asia, consisting of over 7,000 islands known for its stunning beaches, rich biodiversity, and vibrant culture. With a mix of Spanish, American, and native influences, it boasts a diverse population, lively traditions, and delicious cuisine. The country is famous for its warm, hospitable people, colorful festivals, and beautiful landscapes, from lush mountains to pristine coastal areas.</p>
+            </div>
+        </section>
+        </section>        
+        <section class="card resources">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Adrian T. De Leon, the Philippines</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>
