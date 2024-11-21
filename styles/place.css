@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000000;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    padding: .5em 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ffffff;
+    padding: 1em 0;
+    background: rgb(0, 0, 0);
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+img {
+    width: 150%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding-top: 20px;
+}
+
+.info-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 1em;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+}
+
+.info-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5em;
+    color: #0e0e0e;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.2em;
+}
+
+.info-card ul {
+    list-style-type: none;
+}
+
+.info-card li {
+    margin: 0.5em 0;
+}
+
+.data-card {
+    left: 20px;
+    bottom: 20px;
+    border-left: 5px solid #2e7d32;
+}
+
+.data-card h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #2e7d32d1;
+}
+
+.weather-card {
+    right: 20px;
+    bottom: 20px;
+    border-left: 5px solid #0288d1;
+}
+
+.weather-card h2 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #0288d1;
+}
+
+.weather-icon {
+    margin-right: 10px;
+    font-size: 2rem;
+    color: #ffb300; 
+}
+
+
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .info-card {
+        position: static;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .info-card h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+
+    img {
+        border-radius: 5px;
+        padding-top: 0%;
+    }
+}
