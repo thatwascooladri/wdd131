@@ -12,11 +12,12 @@ body {
     margin: 0;
 }
 
+
 header {
     text-align: center;
     background-color: rgb(6, 83, 176);
     color: white;
-    padding: .5em 0;
+    padding: 1em 0;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -32,21 +33,13 @@ footer {
 .hero {
     position: relative;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: flex-end;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-
-img {
-    width: 150%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    padding-top: 20px;
+    padding: 20px;
+    gap: 15px;
 }
 
 .info-card {
@@ -69,6 +62,7 @@ img {
 
 .info-card ul {
     list-style-type: none;
+    padding: 0;
 }
 
 .info-card li {
@@ -85,7 +79,7 @@ img {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    color: #2e7d32d1;
+    color: #2e7d32;
 }
 
 .weather-card {
@@ -104,15 +98,14 @@ img {
 .weather-icon {
     margin-right: 10px;
     font-size: 2rem;
-    color: #ffb300; 
+    color: #ffb300;
 }
-
 
 @media (max-width: 1200px) {
     .hero {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
     }
 
     .info-card {
@@ -124,6 +117,10 @@ img {
     .info-card h2 {
         text-align: center;
     }
+
+    img {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -133,6 +130,7 @@ img {
 
     header {
         font-size: 1.5rem;
+        padding: 0.8em 0;
     }
 
     footer {
@@ -140,11 +138,12 @@ img {
     }
 
     .info-card {
-        width: 100%;
+        width: 95%;
+        margin: 15px auto;
     }
 
     img {
         border-radius: 5px;
-        padding-top: 0%;
+        width: 100%;
     }
 }

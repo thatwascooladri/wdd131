@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the Philippines</title>
+    <title>The Philippines</title>
     <link rel="stylesheet" href="styles/place.css">
-    <script src="scripts/place.js"></script>
 </head>
 <body>
     <header class="header">
-        <h1>the Philippines</h1>
+        <h1>The Philippines</h1>
     </header>
-
     <main class="content">
         <div class="hero">
-            <img src="images/asia1.webp" alt="">
+            <picture>
+                <source srcset="images/asia1-large.webp" media="(min-width: 768px)" class="img-large">
+                <source srcset="images/asia1-small.webp" media="(max-width: 767px)">
+                <img src="images/asia1.webp" alt="Beautiful view of the Philippines">
+            </picture>
             <div class="info-card data-card">
                 <h2>Data</h2>
                 <ul>
@@ -39,9 +41,12 @@
             </div>
         </div>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentyear"></span> Adrian T. De Leon, the Philippines</p>
+        <p>&copy; <span id="currentyear"></span> Adrian T. De Leon, The Philippines</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
+    
+    <script src="scripts/place.js"></script>
 </body>
 </html>
