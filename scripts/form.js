@@ -9,7 +9,6 @@ const products = [
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("product-name");
 
-    // Populate Product Select Options
     products.forEach(product => {
         const option = document.createElement("option");
         option.value = product.id;

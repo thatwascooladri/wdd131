@@ -19,13 +19,11 @@
         <p>&copy; 2024 Product Review</p>
     </footer>
     <script>
-        // Increment the review counter in localStorage
         const counterKey = "reviewCounter";
         let reviewCount = parseInt(localStorage.getItem(counterKey)) || 0;
         reviewCount += 1;
         localStorage.setItem(counterKey, reviewCount);
-
-        // Display the updated counter
+        
         document.getElementById("review-counter").textContent = reviewCount;
     </script>
 </body>
