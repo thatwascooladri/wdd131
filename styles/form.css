@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form, section {
+    display: grid;
+    gap: 1em;
+}
+
+label, legend {
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.hidden {
+    display: none;
+}

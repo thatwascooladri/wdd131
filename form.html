@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+    <main>
+        <form id="review-form" action="review.html" method="get">
+            <label for="product-name">Product Name:</label>
+            <select id="product-name" name="product-name" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
+
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <div>
+                    <input type="radio" id="star-1" name="rating" value="1" required>
+                    <label for="star-1">☆</label>
+                </div>
+                <div>
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2">☆☆</label>
+                </div>
+                <div>
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3">☆☆☆</label>
+                </div>
+                <div>
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4">☆☆☆☆</label>
+                </div>
+                <div>
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5">☆☆☆☆☆</label>
+                </div>
+            </fieldset>
+
+
+            <label for="installation-date">Date of Installation:</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+
+            <fieldset>
+                <legend>Useful Features:</legend>
+                <div>
+                    <input type="checkbox" id="feature-1" name="features" value="Ease of Use">
+                    <label for="feature-1">Ease of Use</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature-2" name="features" value="Durability">
+                    <label for="feature-2">Durability</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="feature-3" name="features" value="Affordability">
+                    <label for="feature-3">Affordability</label>
+                </div>
+            </fieldset>
+
+            <label for="written-review">Written Review (optional):</label>
+            <textarea id="written-review" name="written-review"></textarea>
+
+            <label for="user-name">Your Name (optional):</label>
+            <input type="text" id="user-name" name="user-name">
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Adrian T. De Leon, the Philippines</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>
