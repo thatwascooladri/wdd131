@@ -4,13 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollToTopButton();
     dynamicDestinationInteractions();
     applyLazyLoading();
-
-    const dynamicImage = document.createElement('img');
-    dynamicImage.src = 'example-image.jpg';
-    dynamicImage.alt = 'Dynamically added image';
-    document.body.appendChild(dynamicImage);
-
-    applyLazyLoading();
 });
 
 function handleContactForm() {
