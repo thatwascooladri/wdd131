@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightActiveLink();
     initializeScrollToTopButton();
     dynamicDestinationInteractions();
+    applyLazyLoading();
+
+    const dynamicImage = document.createElement('img');
+    dynamicImage.src = 'example-image.jpg';
+    dynamicImage.alt = 'Dynamically added image';
+    document.body.appendChild(dynamicImage);
+
+    applyLazyLoading();
 });
 
 function handleContactForm() {
@@ -15,11 +23,15 @@ function handleContactForm() {
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            const feedback = document.createElement('p');
+            const feedback = document.getElementById('form-feedback') || document.createElement('p');
             feedback.id = 'form-feedback';
             contactForm.appendChild(feedback);
 
             if (email && message) {
+                const submissions = JSON.parse(localStorage.getItem('submissions')) || [];
+                submissions.push({ email, message, timestamp: new Date().toISOString() });
+                localStorage.setItem('submissions', JSON.stringify(submissions));
+
                 feedback.style.color = 'green';
                 feedback.textContent = 'Thank you for reaching out! I will respond soon.';
                 contactForm.reset();
@@ -28,6 +40,22 @@ function handleContactForm() {
                 feedback.textContent = 'Please fill out all fields.';
             }
         });
+
+        const viewSubmissionsButton = document.createElement('button');
+        viewSubmissionsButton.textContent = 'View Submissions';
+        viewSubmissionsButton.style.marginTop = '10px';
+        viewSubmissionsButton.addEventListener('click', () => {
+            const submissions = JSON.parse(localStorage.getItem('submissions')) || [];
+            if (submissions.length === 0) {
+                console.log('No submissions found.');
+            } else {
+                submissions.forEach(({ email, message, timestamp }) => {
+                    console.log(`Email: ${email}, Message: ${message}, Time: ${new Date(timestamp).toLocaleString()}`);
+                });
+            }
+        });
+
+        contactForm.appendChild(viewSubmissionsButton);
     }
 }
 
@@ -87,4 +115,13 @@ function dynamicDestinationInteractions() {
             });
         });
     }
+}
+
+function applyLazyLoading() {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+    });
 }
